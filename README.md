@@ -1,21 +1,21 @@
-#Bounded Queue KPCB
+# Bounded Queue KPCB
 
 Developed by Nii Mante [@nmante](http://www.github.com/nmante)
 
-##<a href="#instructions">1. Usage Instructions</a>
-##<a href="#prob_statement">2. Problem Statement</a>
+## <a href="#instructions">1. Usage Instructions</a>
+## <a href="#prob_statement">2. Problem Statement</a>
 
-##<a href="#solution">3. My Solution</a>
-##<a href="#complexity">4. Algorithmic Complexity</a>
+## <a href="#solution">3. My Solution</a>
+## <a href="#complexity">4. Algorithmic Complexity</a>
 
-##<div id="instructions">Usage Instructions</div>
+## <div id="instructions">Usage Instructions</div>
 
-###Details
+### Details
 - Implementation Language - C++
 - Compiler version - g++ 4.2.1
 - No external libraries used
 
-###Compilation instructions
+### Compilation instructions
 run `make` from the top level directory (KPCB) to compile the executable
 
 	KPCB
@@ -28,16 +28,16 @@ run `make` from the top level directory (KPCB) to compile the executable
 	|- bin/
 	|  |- *.o
 	
-###How to run the program
+### How to run the program
 The executable is named `NiiQueueKPCB`. Run this command from the command line to use it
 
 	./NiiQueueKPCB
 
-###Output
+### Output
 The program will output the results from a set of Unit Tests which test the enqueue and dequeue functions.
 	
 
-##<div id="prob_statement">Problem Statement</div>
+## <div id="prob_statement">Problem Statement</div>
 Using only primitive types, implement a bounded queue to store integers. The data structure should be optimized for algorithmic runtime, memory usage, and memory throughput. No external libraries should be imported and/or used. The solution should be delivered in one class that provides the following functions:
 
 ***Constructor***: class should provide one method for object creation that takes an integer to set the size of the queue.
@@ -47,7 +47,7 @@ Using only primitive types, implement a bounded queue to store integers. The dat
 ***Dequeue***: function should return an integer if one is currently stored in the queue. The function should properly handle the case where the queue is empty.
 
 
-###Instructions
+### Instructions
 Please provide 
 - the source
 - tests 
@@ -56,9 +56,9 @@ Please provide
 
 You are free to use any coding language that compiles/runs on *nix operating systems and requires no licensed software.
 
-##<div id="solution">My Solution</div>
+## <div id="solution">My Solution</div>
 
-###Limitations
+### Limitations
 
 - Primitive Data types
 	- Assuming no custom node class (i.e. struct node or something like that)
@@ -68,9 +68,9 @@ You are free to use any coding language that compiles/runs on *nix operating sys
 - Bounded queue
 - No external libraries
 
-###How I'll tackle it
+### How I'll tackle it
 
-####One option
+#### One option
 
 It is possible to implement the Bounded Queue with a linked list, but we are restricted to primitive data types.  If I we're to use a linked list implementation though, I would create a custom data structure for the list.
 
@@ -88,7 +88,7 @@ Then I would use composition:
 		//enqueue, dequeue, etc.
 	}
 	
-####The Final Solution - array encapsulated by Queue class
+#### The Final Solution - array encapsulated by Queue class
 
 I will create a ***Queue*** class which contains a Integer array as a private member:
 
@@ -114,7 +114,7 @@ Additionally, we could make this a template class and then pass in the type of d
 	}
 
 	
-##<div id="complexity">Algorithmic Complexity</div>
+## <div id="complexity">Algorithmic Complexity</div>
 
 With my current implementation, the algorithmic complexities will be as follows:
 
